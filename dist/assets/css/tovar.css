@@ -1,0 +1,197 @@
+.tovar {
+    padding-bottom: 30px;
+    background-color: #fff;
+}
+
+.tovar .tovar__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .tovar .tovar__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tovar .tovar__content .tovar__images .tovar__image {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .tovar .tovar__content .tovar__images .tovar__image {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 415px) {
+    .tovar .tovar__content .tovar__images .tovar__image {
+        max-width: 395px;
+    }
+}
+
+@media (max-width: 320px) {
+    .tovar .tovar__content .tovar__images .tovar__image {
+        max-width: 300px;
+    }
+}
+
+.tovar .tovar__content .tovar__images-flex {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    max-width: 622px;
+}
+
+.tovar .tovar__content .tovar__images-flex .tovar__image-flex {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .tovar .tovar__content .tovar__images-flex .tovar__image-flex {
+        max-width: 145px;
+    }
+}
+
+@media (max-width: 415px) {
+    .tovar .tovar__content .tovar__images-flex .tovar__image-flex {
+        max-width: 125px;
+    }
+}
+
+@media (max-width: 320px) {
+    .tovar .tovar__content .tovar__images-flex .tovar__image-flex {
+        max-width: 90px;
+    }
+}
+
+.tovar .tovar__content .tovar__info .tovar__price {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    color: #969fa8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__buttons {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    .tovar .tovar__content .tovar__info .tovar__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.tovar .tovar__content .tovar__info .tovar__buttons .tovar__button-basket {
+    background-color: rgba(249, 50, 50, 0.7);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    transition: 0.3s;
+    padding: 15px 25px;
+    background-color: rgba(249, 50, 50, 0.7);
+    width: 190px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.tovar .tovar__content .tovar__info .tovar__buttons .tovar__button-basket:hover {
+    background-color: #f93232;
+}
+
+@media (max-width: 480px) {
+    .tovar .tovar__content .tovar__info .tovar__buttons .tovar__button-basket {
+        width: 100%;
+    }
+}
+
+.tovar .tovar__content .tovar__info .tovar__buttons .tovar__button-manager {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    color: #046d53;
+    background-color: rgba(4, 109, 83, 0.1);
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-links .tovar__info-link {
+    color: rgba(249, 50, 50, 0.7);
+    border-bottom: 1px dashed rgba(249, 50, 50, 0.7);
+    display: inline-block;
+    -ms-flex-item-align: start;
+    align-self: start;
+    margin-top: 20px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__table-title {
+    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    margin-top: 20px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-table .tovar__info-row {
+    border-bottom: 1px dashed #969fa8;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-table .tovar__info-row .tovar__info-value {
+    padding-bottom: 8px;
+    padding-top: 14px;
+    text-align: left;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-table .tovar__info-row .tovar__info-value:last-child {
+    color: #969fa8;
+    text-align: left;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-table .tovar__info-row .tovar__info-value:first-child {
+    width: 290px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-description {
+    margin-top: 20px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-description .tovar__description__title {
+    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 14px;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-description .tovar__description-text {
+    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+}
+
+.tovar .tovar__content .tovar__info .tovar__info-description .tovar__description-more {
+    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    color: #969fa8;
+    border-bottom: 1px dashed #969fa8;
+}

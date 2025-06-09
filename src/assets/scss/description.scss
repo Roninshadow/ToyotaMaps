@@ -1,0 +1,55 @@
+@use 'variables' as *;
+.descriptions {
+	background-color: $white;
+	margin-top: 20px;
+	padding: 70px 0;
+	.description__toggle {
+		display: flex;
+    margin-bottom: 50px;
+		.description__toggle-item {
+			@include p-16-medium;
+			padding: 8px 20px;
+			background-color: $bg-1;
+			cursor: pointer;
+		}
+		.active {
+			background-color: $main;
+			color: $white;
+		}
+	}
+
+	.description__title {
+    margin-bottom: 30px;
+	}
+	.description__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+		@media (max-width: 480px) {
+			grid-template-columns: 1fr;
+		}
+		.description__photo {
+		}
+
+		.description__video {
+      width: 632px;
+			@media (max-width: 1440px) {
+				width: 755px;
+			}
+			@media (max-width: 1280px) {
+				width: 660px;
+			}
+			@media (max-width: 1024px) {
+				width: 520px;
+			}
+			@media (max-width: 768px) {
+				width: 360px;
+			}
+			@media (max-width: 480px) {
+				width: 100%;
+			}
+		}
+	}
+	.description__text {
+    margin-top: 30px;
+	}
+}
