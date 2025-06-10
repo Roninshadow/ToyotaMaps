@@ -14,12 +14,12 @@
 						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
 					</div>
 					<li class="catalog__filters-item">
-						<input type="checkbox" class="catalog__filters-input" id="checkbox-1" />
-						<label for="checkbox-1" class="catalog__filters-label">Toyota</label>
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-1" value=".Toyota"/>
+						<label for="checkbox-1" class="catalog__filters-label" >Toyota</label>
 					</li>
 					<li class="catalog__filters-item">
-						<input type="checkbox" class="catalog__filters-input" id="checkbox-2" />
-						<label for="checkbox-2" class="catalog__filters-label">Lexus</label>
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-2" value=".Lexus"/>
+						<label for="checkbox-2" class="catalog__filters-label" >Lexus</label>
 					</li>
 				</ul>
 				<ul class="catalog__filters-list hidden-filters">
@@ -28,7 +28,7 @@
 						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
 					</div>
 					<li class="catalog__filters-item">
-						<input type="checkbox" class="catalog__filters-input" id="checkbox-3" />
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-3" value="."/>
 						<label for="checkbox-3" class="catalog__filters-label">Наименование</label>
 					</li>
 				</ul>
@@ -38,7 +38,7 @@
 						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
 					</div>
 					<li class="catalog__filters-item">
-						<input type="checkbox" class="catalog__filters-input" id="checkbox-5" />
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-5" value="."/>
 						<label for="checkbox-5" class="catalog__filters-label">Наименование</label>
 					</li>
 				</ul>
@@ -48,66 +48,12 @@
 				</div>
 			</form>
 			<ul class="catalogPage__cards">
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
-				<li class="catalogPage__card card">
-					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-					<p class="catalog__card-availability availability">В наличии</p>
-					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-					<div class="catalogPage__card-buttons">
-						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-					</div>
-				</li>
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
 			</ul>
 		</div>
 	</div>

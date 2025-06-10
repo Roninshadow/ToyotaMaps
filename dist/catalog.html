@@ -44,11 +44,53 @@
     	</ul>
     	<div class="header__buttons">
     		<button class="header__button call">Заказать звонок</button>
-    		<button class="header__menu">
-    			<img src="../assets/images/fi-sr-menu-burger.svg" alt="" class="header__menu-icon" />
+    		<button class="header__menu" id="burgerBtn">
+    			<img src="assets/images/fi-sr-menu-burger.svg" alt="" class="header__menu-icon" />
     		</button>
     
     	</div>
+    <dialog class="burger" id="burger">
+      <ul class="burger__list">
+        <img src="../assets/images/Vector3-1.svg" alt="" class="burger__list-close close" >
+        <li class="burger__list-item links">
+          <ul class="links__list">
+            <li class="links__item"><a href="index.html" class="links__item-link">Главная</a></li>
+            <li class="links__item"><a href="catalog.html" class="links__item-link">Каталог</a></li>
+            <li class="links__item"><a href="index.html#instruction" class="links__item-link">Как установить</a></li>
+            <li class="links__item"><a href="index.html#testimonials" class="links__item-link">Отзывы</a></li>
+          </ul>
+        </li>
+        <li class="burger__list-item contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="mailto:toyota-maps@yandex.ru" class="contacts__item-link">Электронная почта</a>
+            </li>
+            <li class="contacts__item"><a href="tel:79140665555" class="contacts__item-link">+7 (914) 066-55-55</a></li>
+          </ul>
+        </li>
+        <li class="burger__list-item socials">
+          <ul class="socials__list">
+            <li class="socials__list">
+              <a href="" class="socials__list-link"
+                ><img src="assets/images/span_whatsapp.png" alt="" class="socials__list-icon"
+              /></a>
+            </li>
+            <li class="socials__list">
+              <a href="" class="socials__list-link"
+                ><img src="assets/images/span_telegram.png" alt="" class="socials__list-icon"
+              /></a>
+            </li>
+          </ul>
+        </li>
+        <li class="burger__list-item buttons">
+          <ul class="buttons__list">
+            <li class="buttons__list-item"><button class="buttons__list-button">Заказать звонок</button></li>
+            <li class="buttons__list-item"><button class="buttons__list-button">Перейти в каталог</button></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </dialog>
     </header>
 
     <section class="catalog">
@@ -67,12 +109,12 @@
     						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
     					</div>
     					<li class="catalog__filters-item">
-    						<input type="checkbox" class="catalog__filters-input" id="checkbox-1" />
-    						<label for="checkbox-1" class="catalog__filters-label">Toyota</label>
+    						<input type="checkbox" class="catalog__filters-input" id="checkbox-1" value=".Toyota"/>
+    						<label for="checkbox-1" class="catalog__filters-label" >Toyota</label>
     					</li>
     					<li class="catalog__filters-item">
-    						<input type="checkbox" class="catalog__filters-input" id="checkbox-2" />
-    						<label for="checkbox-2" class="catalog__filters-label">Lexus</label>
+    						<input type="checkbox" class="catalog__filters-input" id="checkbox-2" value=".Lexus"/>
+    						<label for="checkbox-2" class="catalog__filters-label" >Lexus</label>
     					</li>
     				</ul>
     				<ul class="catalog__filters-list hidden-filters">
@@ -81,7 +123,7 @@
     						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
     					</div>
     					<li class="catalog__filters-item">
-    						<input type="checkbox" class="catalog__filters-input" id="checkbox-3" />
+    						<input type="checkbox" class="catalog__filters-input" id="checkbox-3" value="."/>
     						<label for="checkbox-3" class="catalog__filters-label">Наименование</label>
     					</li>
     				</ul>
@@ -91,7 +133,7 @@
     						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
     					</div>
     					<li class="catalog__filters-item">
-    						<input type="checkbox" class="catalog__filters-input" id="checkbox-5" />
+    						<input type="checkbox" class="catalog__filters-input" id="checkbox-5" value="."/>
     						<label for="checkbox-5" class="catalog__filters-label">Наименование</label>
     					</li>
     				</ul>
@@ -101,67 +143,61 @@
     				</div>
     			</form>
     			<ul class="catalogPage__cards">
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    				<li class="catalogPage__card card">
-    					<img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
-    					<p class="catalog__card-availability availability">В наличии</p>
-    					<p class="catalogPage__card-title card-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    					<p class="catalogPage__card-price card-price">от 4.500 руб</p>
-    					<div class="catalogPage__card-buttons">
-    						<button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button
-    						><button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
-    					</div>
-    				</li>
-    			</ul>
+    				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>				<li class="catalogPage__card card mix Toyota">
+    				  <img src="assets/images/book.png" alt="" class="catalogPage__card-image card-image" />
+    				  <p class="catalog__card-availability availability">В наличии</p>
+    				  <p class="catalogPage__card-title card-title">2USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
+    				  <p class="catalogPage__card-price card-price">от 4.500 руб</p>
+    				  <div class="catalogPage__card-buttons">
+    				    <button class="catalogPage__card-button" onclick="window.location.href='tovar.html'">Подробнее</button>
+    				    <button data-card onclick="window.location.href='basket.html'" class="catalogPage__card-button buy">В корзину</button>
+    				  </div>
+    				</li>			</ul>
     		</div>
     	</div>
     </section>

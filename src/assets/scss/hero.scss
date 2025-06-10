@@ -29,6 +29,9 @@
 		max-width: 750px;
 		margin: 20px 0;
 		margin-left: 13px;
+		@media (max-width: 1440px) {
+			margin-left: 0;
+		}
 		@media (max-width: 768px) {
 			font-size: 25px;
 		}
@@ -40,6 +43,9 @@
 		font-weight: 400;
 		line-height: 140%;
 		margin-left: 13px;
+		@media (max-width: 1440px) {
+			margin-left: 0;
+		}
 		@media (max-width: 768px) {
 			font-size: 20px;
 		}

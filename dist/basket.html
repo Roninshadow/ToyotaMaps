@@ -44,11 +44,53 @@
     	</ul>
     	<div class="header__buttons">
     		<button class="header__button call">Заказать звонок</button>
-    		<button class="header__menu">
-    			<img src="../assets/images/fi-sr-menu-burger.svg" alt="" class="header__menu-icon" />
+    		<button class="header__menu" id="burgerBtn">
+    			<img src="assets/images/fi-sr-menu-burger.svg" alt="" class="header__menu-icon" />
     		</button>
     
     	</div>
+    <dialog class="burger" id="burger">
+      <ul class="burger__list">
+        <img src="../assets/images/Vector3-1.svg" alt="" class="burger__list-close close" >
+        <li class="burger__list-item links">
+          <ul class="links__list">
+            <li class="links__item"><a href="index.html" class="links__item-link">Главная</a></li>
+            <li class="links__item"><a href="catalog.html" class="links__item-link">Каталог</a></li>
+            <li class="links__item"><a href="index.html#instruction" class="links__item-link">Как установить</a></li>
+            <li class="links__item"><a href="index.html#testimonials" class="links__item-link">Отзывы</a></li>
+          </ul>
+        </li>
+        <li class="burger__list-item contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="mailto:toyota-maps@yandex.ru" class="contacts__item-link">Электронная почта</a>
+            </li>
+            <li class="contacts__item"><a href="tel:79140665555" class="contacts__item-link">+7 (914) 066-55-55</a></li>
+          </ul>
+        </li>
+        <li class="burger__list-item socials">
+          <ul class="socials__list">
+            <li class="socials__list">
+              <a href="" class="socials__list-link"
+                ><img src="assets/images/span_whatsapp.png" alt="" class="socials__list-icon"
+              /></a>
+            </li>
+            <li class="socials__list">
+              <a href="" class="socials__list-link"
+                ><img src="assets/images/span_telegram.png" alt="" class="socials__list-icon"
+              /></a>
+            </li>
+          </ul>
+        </li>
+        <li class="burger__list-item buttons">
+          <ul class="buttons__list">
+            <li class="buttons__list-item"><button class="buttons__list-button">Заказать звонок</button></li>
+            <li class="buttons__list-item"><button class="buttons__list-button">Перейти в каталог</button></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </dialog>
     </header>
 
     <section class="basket">
@@ -69,26 +111,7 @@
     			<div class="basket__flex">
     				<div class="basket__items">
     					<p class="basket__items-title">Вы набрали:</p>
-    					<ul class="basket__list basket_js" id="basket_js">
-    						<li class="basket__item">
-    							<div class="basket-adaptives">
-    								<img src="assets/images/b3ec12fca32531f1d54ab75efebe1f3ce9583f84.png" alt="" class="basket__item-image" />
-    								<p class="basket__item-title">USB-Обновление карт навигации и ПО Toyota и Lexus GEN 10</p>
-    							</div>
-    							<div class="basket-adaptives2">
-    								<p class="basket__item-price">109 990</p>
-    								<div class="basket__item-counter counter">
-    									<button class="basket__item-minus minus" data-action="minus">
-    										<img src="assets/images/Vector3.svg" alt="" class="basket__item-icon" />
-    									</button>
-    									<p class="basket__item-number quantity">1</p>
-    									<button class="basket__item-plus plus" data-action="plus">
-    										<img src="assets/images/Vector3-1.svg" alt="" class="basket__item-icon" />
-    									</button>
-    								</div>
-    								<p class="basket__item-delete">Удалить</p>
-    							</div>
-    						</li>
+    					<ul class="basket__list" id="basket_js">
     					</ul>
     				</div>
     				<form action="" class="basket__form">
@@ -99,11 +122,11 @@
     					</div>
     					<div class="basket__form-order">
     						<p class="basket__order-title">Ваш заказ:</p>
-    						<p class="basket__order-quantity">33 товара</p>
+    						<p class="basket__order-quantity">0 товара</p>
     					</div>
     					<div class="basket__form-total">
     						<p class="basket__total-title">Итого:</p>
-    						<p class="basket__total-price">20,000 руб</p>
+    						<p class="basket__total-price">0 руб</p>
     					</div>
     					<button class="basket__form-button">Оформить заказ</button>
     				</form>

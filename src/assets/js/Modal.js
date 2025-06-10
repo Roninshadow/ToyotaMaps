@@ -1,4 +1,4 @@
-const call  = document.querySelectorAll('.call')
+const call = document.querySelectorAll('.call')
 const popUpConnect = document.getElementById('Connect')
 const popUpConnectEnd = document.getElementById('ConnectEnd')
 const popUpConnectEndBtn = document.getElementById('ConnectEndBtn')
@@ -8,49 +8,82 @@ const popUpQuestion = document.getElementById('Question')
 const popUpQuestionEnd = document.getElementById('QuestionEnd')
 const popUpQuestionEndBtn = document.getElementById('QuestionEndBtn')
 
+const burgerBtn = document.getElementById('burgerBtn')
+const popUpBurger = document.getElementById('burger')
+
 const popUpClose = document.querySelectorAll('.close')
 
-
-function openConnectModal () {
-  popUpConnect.showModal()
-  document.body.classList.add('scroll-block')
+function openConnectModal() {
+	if (popUpConnect) {
+		popUpConnect.showModal()
+		document.body.classList.add('scroll-block')
+	}
 }
+
 function openConnectEndModal() {
 	closeModal()
-	popUpConnectEnd.showModal()
-  document.body.classList.add('scroll-block')
+	if (popUpConnectEnd) {
+		popUpConnectEnd.showModal()
+		document.body.classList.add('scroll-block')
+	}
 }
-function openQuestion () {
-  popUpQuestion.showModal()
-  document.body.classList.add('scroll-block')
+
+function openQuestion() {
+	if (popUpQuestion) {
+		popUpQuestion.showModal()
+		document.body.classList.add('scroll-block')
+	}
 }
-function openQuestionEnd () {
+
+function openQuestionEnd() {
 	closeModal()
-  popUpQuestionEnd.showModal()
-  document.body.classList.add('scroll-block')
-}
-function closeModal () {
-  popUpConnect.close()
-  popUpConnectEnd.close()
-  popUpQuestion.close()
-  popUpQuestionEnd.close()
-  returnScroll()
-}
-function returnScroll () {
-  document.body.classList.remove('scroll-block')
+	if (popUpQuestionEnd) {
+		popUpQuestionEnd.showModal()
+		document.body.classList.add('scroll-block')
+	}
 }
 
-call.forEach(el => {
-  el.addEventListener('click', openConnectModal)
-})
-ask.forEach(el => {
-  el.addEventListener('click', openQuestion)
-})
-popUpClose.forEach(el=> {
-  el.addEventListener('click', closeModal)
-})
+function closeModal() {
+	popUpConnect?.close()
+	popUpConnectEnd?.close()
+	popUpQuestion?.close()
+	popUpQuestionEnd?.close()
+	popUpBurger?.close()
+	returnScroll()
+}
 
+function returnScroll() {
+	document.body.classList.remove('scroll-block')
+}
 
-popUpConnectEndBtn.addEventListener('click', openConnectEndModal)
-popUpQuestionEndBtn.addEventListener('click', openQuestionEnd)
+if (call.length && popUpConnect) {
+	call.forEach(el => {
+		el.addEventListener('click', openConnectModal)
+	})
+}
 
+if (ask.length && popUpQuestion) {
+	ask.forEach(el => {
+		el.addEventListener('click', openQuestion)
+	})
+}
+
+if (popUpClose.length) {
+	popUpClose.forEach(el => {
+		el.addEventListener('click', closeModal)
+	})
+}
+
+if (burgerBtn && popUpBurger) {
+	burgerBtn.addEventListener('click', () => {
+		popUpBurger.showModal()
+	})
+}
+
+if (popUpConnectEndBtn) {
+	popUpConnectEndBtn.addEventListener('click', openConnectEndModal)
+}
+
+if (popUpQuestionEndBtn) {
+	popUpQuestionEndBtn.addEventListener('click', openQuestionEnd)
+}
