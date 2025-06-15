@@ -1,0 +1,178 @@
+@use 'variables' as *;
+.tovar {
+	padding-bottom: 30px;
+	background-color: $white;
+	.tovar__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
+
+		.tovar__images {
+			.tovar__image {
+				width: 100%;
+				max-height: 450px;
+				border-radius: 10px;
+				@media (max-width: 480px) {
+					max-width: 460px;
+				}
+				@media (max-width: 415px) {
+					max-width: 395px;
+				}
+				@media (max-width: 320px) {
+					max-width: 300px;
+				}
+			}
+			&-flex {
+				display: flex;
+				gap: 10px;
+				max-width: 622px;
+				position: relative;
+				align-self: flex-start;
+				overflow-x: auto;
+				scrollbar-width: none;
+				overflow-y: hidden;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+				@media (max-width: 1024px) {
+					max-width: 870px;
+				}
+				@media (max-width: 768px) {
+					max-width: 600px;
+				}
+				@media (max-width: 480px) {
+					max-width: 460px;
+				}
+				@media (max-width: 415px) {
+					max-width: 395px;
+				}
+				@media (max-width: 320px) {
+					max-width: 300px;
+				}
+				.tovar__image-flex {
+					max-width: calc((100% - 20px) / 3);
+					border-radius: 10px;
+				}
+			}
+		}
+		.tovar__info {
+			.tovar__name {
+				font-size: 20px;
+			}
+			.tovar__price {
+				@include p-16-medium;
+				color: $gray;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.tovar__buttons {
+				display: flex;
+				gap: 10px;
+				@media (max-width: 480px) {
+					flex-direction: column;
+				}
+				.tovar__button-basket {
+					@include red-button;
+					padding: 15px 25px;
+					background-color: $add-red;
+					width: 190px;
+					border-radius: 6px;
+					color: $white;
+					@media (max-width: 480px) {
+						width: 100%;
+					}
+				}
+				.tovar__button-manager {
+					padding: 8px 20px;
+					border-radius: 4px;
+					@include p-16-medium;
+					color: $add;
+					background-color: $add-green;
+				}
+			}
+			.tovar__info-links {
+				display: flex;
+				flex-direction: column;
+				.tovar__info-link {
+					color: $add-red;
+					border-bottom: 1px dashed $add-red;
+					display: inline-block;
+					align-self: start;
+					margin-top: 20px;
+					@include p-14-regular;
+				}
+			}
+			.tovar__table-title {
+				@include p-14-medium;
+				margin-top: 20px;
+			}
+			.tovar__info-table {
+				.tovar__info-row {
+					border-bottom: 1px dashed $gray;
+					@media (max-width: 768px) {
+						display: flex;
+						flex-direction: column;
+					}
+
+					.tovar__info-value {
+						padding-bottom: 8px;
+						padding-top: 14px;
+						text-align: left;
+						&:last-child {
+							color: $gray;
+							text-align: left;
+						}
+						&:first-child {
+							width: 290px;
+						}
+						@media (max-width: 768px) {
+							padding-top: 10px;
+						}
+					}
+				}
+			}
+			.tovar__info-description {
+				margin-top: 20px;
+				.tovar__description__title {
+					@include p-14-medium;
+					margin-bottom: 14px;
+				}
+				.tovar__description-text {
+					@include p-14-regular;
+				}
+				.tovar__description-more {
+					@include p-14-regular;
+					color: $gray;
+					border-bottom: 1px dashed $gray;
+				}
+			}
+		}
+	}
+}
+.tovar__availability-position {
+	position: relative;
+}
+.tovar__availability {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 10;
+	color: $add;
+	@include p-14-regular;
+}
+.tovar__images-slider {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	cursor: pointer;
+}
+.right-images {
+	right: -12px;
+}
+.left-images {
+	left: -12px;
+}

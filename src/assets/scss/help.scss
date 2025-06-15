@@ -1,0 +1,130 @@
+@use 'variables' as *;
+.help {
+	padding: 70px 328px;
+	margin-top: 67px;
+	// background-color: #bb2d2d;
+	background: linear-gradient(
+		90deg,
+		#b82626 0%, 
+		#c23232 25%,
+		#cc3a3a 50%, 
+		#c23232 75%,
+		#b82626 100%
+	);
+
+	width: 100%;
+	@media (max-width: 1440px) {
+		padding: 70px 90px;
+	}
+	@media (max-width: 415px) {
+		padding: 50px 20px;
+	}
+
+	.help__title {
+		text-align: center;
+		color: $white;
+		margin-left: 12px;
+		@media (max-width: 1440px) {
+			margin-left: 0;
+		}
+		@media (max-width: 768px) {
+			@include p-16-medium;
+		}
+	}
+
+	.help__form {
+		background-color: $bg-1;
+		border-radius: 10px;
+		padding: 40px 200px;
+		margin-top: 50px;
+		@media (max-width: 1024px) {
+			padding: 30px 100px;
+		}
+		@media (max-width: 480px) {
+			padding: 40px 20px;
+		}
+
+		.help__form-title {
+			text-align: center;
+			max-width: 440px;
+			margin-left: 212px;
+			@media (max-width: 1280px) {
+				margin-left: 130px;
+			}
+			@media (max-width: 1024px) {
+				margin-left: 100px;
+			}
+			@media (max-width: 768px) {
+				@include p-16-medium;
+				max-width: none;
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+
+		.help__form-top {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			margin-top: 50px;
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+			.help__form-input {
+				padding: 10px 14px;
+				background-color: $white;
+				border-radius: 6px;
+				max-width: 277px;
+				width: 100%;
+				@media (max-width: 1280px) {
+					max-width: 250px;
+				}
+				@media (max-width: 1024px) {
+					max-width: 220px;
+					max-width: 320px;
+				}
+			}
+
+			.help__form-button {
+				@include red-button;
+				padding: 15px 25px;
+				width: 100%;
+				max-width: 270px;
+				margin-right: -20px;
+				border-radius: 6px;
+				@media (max-width: 1024px) {
+					max-width: 200px;
+					padding: 10px 10px;
+				}
+				@media (max-width: 768px) {
+					max-width: 320px;
+					margin-right: 0;
+					@include p-16-medium;
+				}
+			}
+		}
+
+		.help__form-bottom {
+			@include p-14-regular;
+			color: $add-red;
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			margin-top: 48px;
+			margin-left: 12px;
+			@media (max-width: 768px) {
+				margin-left: 0;
+			}
+			@media (max-width: 480px) {
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+	}
+}
+.phone {
+	&::placeholder {
+		color: $black;
+	}
+}

@@ -1,0 +1,110 @@
+@use 'variables' as *;
+.header {
+	display: flex;
+	align-items: center;
+	background-color: $white;
+	padding: 20px 328px;
+	padding-right: 0;
+	@include border-bottom;
+	@media (max-width: 1440px) {
+		padding: 20px 100px;
+	}
+	@media (max-width: 1280px) {
+		padding: 20px 70px;
+	}
+	@media (max-width: 1024px) {
+		padding: 10px 60px;
+		justify-content: space-between;
+	}
+	@media (max-width: 480px) {
+		padding: 10px 10px;
+	}
+
+	.header__nav-list {
+		display: flex;
+		gap: 18px;
+		margin-left: 42px;
+		margin-right: 42px;
+		@media (max-width: 1280px) {
+			margin-left: 20px;
+			margin-right: 30px;
+			font-size: 14px;
+			gap: 15px;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+		.header__nav-item {
+			.header__nav-link {
+				@include p-16-regular;
+				color: $black;
+			}
+		}
+	}
+
+	.header__contacts {
+		display: flex;
+		gap: 19px;
+		margin-right: 19px;
+		@media (max-width: 1280px) {
+			font-size: 14px;
+			gap: 13px;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+		.header__contact {
+			.header__contact-link {
+				@include p-16-medium;
+			}
+		}
+	}
+
+	.header__socials {
+		display: flex;
+		gap: 18px;
+		margin-right: 40px;
+		@media (max-width: 1280px) {
+			gap: 14px;
+			margin-right: 30px;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	.header__button {
+		@include red-button;
+		@include p-14-medium;
+		border-radius: 6px;
+		padding: 15px;
+		white-space: nowrap;
+		@media (max-width: 1280px) {
+			padding: 15px 10px;
+		}
+		@media (max-width: 320px) {
+			padding: 10px 5px;
+			
+		}
+	}
+}
+.header__menu {
+	@include red-button;
+	padding: 14px;
+	padding-top: 13px;
+	padding-bottom: 9px;
+	border-radius: 4px;
+	display: none;
+	@media (max-width: 1024px) {
+		display: block;
+	}
+	@media (max-width: 320px) {
+		padding: 6px 5px;
+		padding-top: 5px;
+		padding-bottom: 1px;
+	}
+}
+.header__buttons {
+	display: flex;
+	gap: 8px;
+}

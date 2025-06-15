@@ -1,0 +1,60 @@
+<section class="catalog">
+	<div class="container">
+		<ul class="catalog__breadcrumbs">
+			<li class="catalog__breadcrumb"><a href="index.html" class="catalog__breadcrumbs-link">Главная</a></li>
+			<li class="catalog__breadcrumb"><a href="catalog.html" class="catalog__breadcrumbs-link">Каталог</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="catalog__flex">
+			<form action="" class="catalog__filters">
+				<ul class="catalog__filters-list hidden-filters">
+					<div class="catalog__filters-title">
+						<p class="catalog__filters-text">Марка</p>
+						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
+					</div>
+					<li class="catalog__filters-item">
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-1" value=".Toyota"/>
+						<label for="checkbox-1" class="catalog__filters-label" >Toyota</label>
+					</li>
+					<li class="catalog__filters-item">
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-2" value=".Lexus"/>
+						<label for="checkbox-2" class="catalog__filters-label" >Lexus</label>
+					</li>
+				</ul>
+				<ul class="catalog__filters-list hidden-filters">
+					<div class="catalog__filters-title">
+						<p class="catalog__filters-text">Модель</p>
+						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
+					</div>
+					<li class="catalog__filters-item">
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-3" value="."/>
+						<label for="checkbox-3" class="catalog__filters-label">Наименование</label>
+					</li>
+				</ul>
+				<ul class="catalog__filters-list hidden-filters">
+					<div class="catalog__filters-title">
+						<p class="catalog__filters-text">Год выпуска</p>
+						<img src="assets/images/Stroke.svg" alt="" class="catalog__filters-arrow" />
+					</div>
+					<li class="catalog__filters-item">
+						<input type="checkbox" class="catalog__filters-input" id="checkbox-5" value="."/>
+						<label for="checkbox-5" class="catalog__filters-label">Наименование</label>
+					</li>
+				</ul>
+				<div class="catalog__filter-buttons">
+					<button class="catalog__filter-apply">Применить</button>
+					<button class="catalog__filter-reset">Сбросить фильтр</button>
+				</div>
+			</form>
+			<ul class="catalogPage__cards">
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+				{{> cardPage }}
+			</ul>
+		</div>
+	</div>
+</section>

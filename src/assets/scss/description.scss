@@ -1,0 +1,50 @@
+@use 'variables' as *;
+.descriptions {
+	background-color: $white;
+	margin-top: 20px;
+	padding: 70px 0;
+	.description__toggle {
+		display: flex;
+		margin-bottom: 50px;
+		width: 100%;
+		.description__toggle-item {
+			@include p-16-medium;
+			padding: 8px 20px;
+			background-color: $bg-1;
+			cursor: pointer;
+			@media (max-width: 768px) {
+				font-size: 14px;
+			}
+		}
+		.active {
+			background-color: $main;
+			color: $white;
+		}
+	}
+
+	.description__title {
+		margin-bottom: 30px;
+	}
+	.description__content {
+		display: flex;
+		@media (max-width: 480px) {
+			flex-direction: column;
+		}
+		.description__photo {
+			width: calc(100% / 2);
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+		}
+
+		.description__video {
+			width: calc(100% / 2);
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+	.description__text {
+		margin-top: 30px;
+	}
+}

@@ -1,0 +1,167 @@
+@use 'variables' as *;
+.basket {
+	.basketEmpty__content {
+		width: 100%;
+		text-align: center;
+		display: none;
+		&-text {
+			@include p-16-regular;
+		}
+		&-button {
+			@include red-button;
+			margin-top: 30px;
+			padding: 15px 25px;
+			max-width: 330px;
+			width: 100%;
+			border-radius: 6px;
+		}
+	}
+	&__content {
+			// display: none;
+
+		.basket__flex {
+			display: flex;
+			align-items: flex-start;
+			gap: 20px;
+			margin-top: 50px;
+			margin-bottom: 100px;
+			@media (max-width: 1024px) {
+				flex-direction: column;
+			}
+		}
+		.basket__items {
+			padding: 30px;
+			border-radius: 10px;
+			background-color: $white;
+			width: 100%;
+
+			&-title {
+				@include p-16-medium;
+				margin-bottom: 40px;
+			}
+			.basket__item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				@media (max-width: 480px) {
+					flex-direction: column;
+				}
+				&:last-child {
+					margin: 0;
+				}
+				.basket-adaptives {
+					display: flex;
+					align-items: center;
+					.basket__item-image {
+						max-width: 88px;
+						max-height: 71px;
+						border-radius: 8px;
+						margin-right: 10px;
+					}
+					.basket__item-title {
+						@include p-14-regular;
+						margin-right: 30px;
+					}
+				}
+				.basket-adaptives2 {
+					display: flex;
+					align-items: center;
+					@media (max-width: 480px) {
+						margin-top: 30px;
+					}
+					.basket__item-price {
+						@include p-14-regular;
+						margin-right: 30px;
+						white-space: nowrap;
+						&::after {
+							content: ' ₽';
+						}
+					}
+					.basket__item-counter {
+						display: flex;
+						align-items: center;
+						gap: 14px;
+						padding: 6px 8px;
+						background-color: $bg-1;
+						border-radius: 8px;
+						margin-right: 20px;
+						.basket__item-number {
+							@include p-14-regular;
+						}
+						.basket__item-minus {
+							width: 14px;
+						}
+						.basket__item-plus {
+							width: 14px;
+						}
+					}
+					.basket__item-delete {
+						@include p-14-regular;
+						color: $gray;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.basket__form {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			padding: 40px;
+			border-radius: 10px;
+			background-color: $white;
+			width: 100%;
+			max-width: 408px;
+			@media (max-width: 1024px) {
+				max-width: none;
+			}
+			.basket__form-title {
+				@include p-16-medium;
+			}
+			.basket__form-inputs {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				.basket__form-input {
+					padding: 10px 14px;
+					@include border;
+					border-radius: 6px;
+					width: 100%;
+				}
+			}
+			.basket__form-order {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.basket__order-title {
+					@include p-16-medium;
+				}
+				.basket__order-quantity {
+					@include p-16-regular;
+				}
+			}
+			.basket__form-total {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.basket__total-title {
+					@include p-16-medium;
+				}
+				.basket__total-price {
+					@include p-16-regular;
+				}
+			}
+			.basket__form-button {
+				@include red-button;
+				padding: 15px 25px;
+				border-radius: 6px;
+			}
+		}
+	}
+}
+.total {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}

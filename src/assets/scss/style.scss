@@ -1,0 +1,75 @@
+@use 'variables' as *;
+@use 'sass:meta';
+@use 'reset';
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: $bg-1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+.container {
+	max-width: 1264px;
+	margin: 0 auto;
+	padding: 0;
+	@media (max-width: 1280px) {
+		max-width: 1100px;
+	}
+	@media (max-width: 1024px) {
+		max-width: 870px;
+	}
+	@media (max-width: 768px) {
+		max-width: 600px;
+	}
+	@media (max-width: 480px) {
+		max-width: 460px;
+	}
+	@media (max-width: 415px) {
+		max-width: 395px;
+	}
+	@media (max-width: 320px) {
+		max-width: 300px;
+	}
+}
+h1 {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 140%;
+	@media (max-width: 1024px) {
+		font-size: 25px;
+	}
+}
+h2 {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 140%;
+	@media (max-width: 1024px) {
+		font-size: 23px;
+	}
+}
+h3 {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 140%;
+	@media (max-width: 1024px) {
+		font-size: 17px;
+	}
+}
+.scroll-block {
+	overflow: hidden;
+}
+@include meta.load-css('catalog');
+@include meta.load-css('catalog-page');
+@include meta.load-css('faq');
+@include meta.load-css('footer');
+@include meta.load-css('header');
+@include meta.load-css('hero');
+@include meta.load-css('Instructions');
+@include meta.load-css('testimonial');
+@include meta.load-css('help');
+@include meta.load-css('description');
+@include meta.load-css('tovar');
+@include meta.load-css('basket');
+@include meta.load-css('popup');
+@include meta.load-css('burger');

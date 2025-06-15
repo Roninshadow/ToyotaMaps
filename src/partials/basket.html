@@ -1,0 +1,43 @@
+<section class="basket">
+	<div class="container">
+		<ul class="catalog__breadcrumbs">
+			<li class="catalog__breadcrumb"><a href="index.html" class="catalog__breadcrumbs-link">Главная</a></li>
+			<li class="catalog__breadcrumb"><a href="catalog.html" class="catalog__breadcrumbs-link">Каталог</a></li>
+			<li class="catalog__breadcrumb"><a href="catalog.html" class="catalog__breadcrumbs-link">Корзина</a></li>
+		</ul>
+	</div>
+	<div class="basketEmpty__content">
+		<p class="basketEmpty__content-text">У вас пока нет ни одного товара в корзине</p>
+		<button class="basketEmpty__content-button">Перейти в корзину</button>
+	</div>
+	<div class="container">
+		<div class="basket__content">
+			<h2 class="basket__title">Корзина</h2>
+			<div class="basket__flex">
+				<div class="basket__items">
+					<p class="basket__items-title">Вы набрали:</p>
+					<ul class="basket__list" id="basket_js">
+					</ul>
+				</div>
+				<form action="" class="basket__form">
+					<p class="basket__form-title">Оформление:</p>
+					<div class="basket__form-inputs">
+						<input type="text" class="basket__form-input" placeholder="Имя" />
+						<input type="text" class="basket__form-input" placeholder="Номер телефона" />
+					</div>
+					<div class="total">
+						<div class="basket__form-order">
+							<p class="basket__order-title">Ваш заказ:</p>
+							<p class="basket__order-quantity">0 товара</p>
+						</div>
+						<div class="basket__form-total">
+							<p class="basket__total-title">Итого:</p>
+							<p class="basket__total-price">0 руб</p>
+						</div>
+					</div>
+					<button class="basket__form-button">Оформить заказ</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
